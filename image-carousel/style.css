@@ -1,0 +1,79 @@
+.slider_container{
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    max-width: 100%;
+}
+
+.slider_container .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current{
+    opacity: 1;
+}
+
+.slide .content{
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background-color: rgba(12, 2, 44, 0.979);
+    color: #fff;
+    padding: 5px;
+}
+
+.slide.current .content{
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+
+.buttons button{
+    border: 2px solid white;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button#next{
+    position: absolute;
+    top: 35%;
+    right: 15px;
+}
+
+
+.buttons button#prev{
+    position: absolute;
+    top: 35%;
+    left: 15px;
+}
+
+/* background images using psuedo selectors*/
+.slide:first-child{
+    background: url('imgs/withdrawbanner.jpg') no-repeat center top/cover;
+}
+
+.slide:nth-child(2){
+    background: url('imgs/supportbanner.jpg') no-repeat center top/cover;
+}
+
+.slide:nth-child(3){
+    background: url('imgs/btcbanner.jpg') no-repeat center top/cover;
+}
+
+.slide:nth-child(4){
+    background: url('imgs/ethbanner.jpg') no-repeat center top/cover;
+}

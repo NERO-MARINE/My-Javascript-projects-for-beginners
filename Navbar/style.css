@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* navigation links */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.nav-brand{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px;
+    color: orangered;
+    cursor: pointer;
+}
+
+.nav-links ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a{
+    display: block; /*so we can add padding*/
+    text-decoration: none;
+    padding: 15px;
+    color: red;
+    font-weight: bolder;
+}
+
+.nav-links li a:hover{
+    color: white;
+}
+
+div#searchFood input[type='search']{
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+div#searchFood input[type='search']:focus{
+    outline-color: orange;
+}
+
+.toggler{
+    position: absolute;
+    top: 30%;
+    right: 3%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggler .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* 
+responsive design */
+
+@media(max-width: 680px){
+    .toggler{
+        display: flex;
+    }
+
+    .toggler_small_screen{
+        top: 7%;
+    }
+
+    .nav-links{
+        display: none;
+        width: 100%;
+    }
+
+    div#searchFood input[type='search']{
+        display: none;
+    }
+     
+    div#searchFood input[type='search'].active{
+        display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active{
+        display: flex;
+        animation-name: openNavbar;
+        animation-duration: 3s;
+    }
+    @keyframes openNavbar {
+        from{opacity: 0}
+        to{opacity: 1}
+    }
+}
+
+/* navigation links end */

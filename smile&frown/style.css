@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.face{
+    font-size: 100px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.smile{
+    display: none;
+    cursor: pointer;
+}
+
+.frown{
+    display: none;
+}
+
+.active{
+    display: block;
+}
