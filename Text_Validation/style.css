@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    background-color: #848484;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form_field{
+    padding: 30px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tick{
+    color: green;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.error{
+    color: red;
+}
+
+.valid .tick{
+    opacity: 1;
+}
+
+#email{
+    transition: all 1s ease-in-out;
+}
+
+.valid #email{
+    border: 1px solid green;
+    outline: 1px solid green;
+}

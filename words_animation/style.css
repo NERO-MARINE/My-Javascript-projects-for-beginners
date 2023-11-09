@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    margin: 30px 0;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+section > div{
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+.words span{
+    display: block;
+}
+
+.words{
+    position: relative;
+    animation: myWords 5s infinite;
+}
+
+@keyframes myWords{
+    0% {top: 0;}
+    10% {top: 0;}
+    20% {top: -50px;}
+    30% {top: -50px;}
+    40% {top: -100px;}
+    50% {top: -100px;}
+    60% {top: -150px;}
+    70% {top: -150px;}
+    80% {top: -200px;}
+    90% {top: -200px;}
+    100% {top: -250px;}
+    110% {top: -250px;}
+}
+
+.words span:nth-child(1){
+    color: red;
+}
+
+.words span:nth-child(2){
+    color: yellow;
+}
+
+.words span:nth-child(3){
+    color: lightgreen;
+}
+
+.words span:nth-child(4){
+    color: orange;
+}
+
+.words span:nth-child(5){
+    color: lightcoral;
+}
+
+.words span:nth-child(6){
+    color: blue;
+}

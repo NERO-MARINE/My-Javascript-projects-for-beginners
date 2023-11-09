@@ -1,120 +1,83 @@
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .container{
-    max-width: 1600px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    position: relative;
 }
 
-/* navigation links */
+.hero{
+    background-color: green;
+}
+
 .navbar{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: black;
+    justify-content: space-between;
 }
 
-.nav-brand{
+.logo{
+    color: white;
     font-size: 30px;
-    font-weight: bold;
-    margin: 15px;
-    color: orangered;
-    cursor: pointer;
 }
 
-.nav-links ul{
+.navbar_links{
     display: flex;
     list-style: none;
+    gap: 10px;
 }
 
-.nav-links li a{
-    display: block; /*so we can add padding*/
-    text-decoration: none;
-    padding: 15px;
-    color: red;
-    font-weight: bolder;
-}
-
-.nav-links li a:hover{
+.navbar_links li a{
     color: white;
+    text-decoration: none;
 }
 
-div#searchFood input[type='search']{
-    padding: 5px;
-    margin-right: 10px;
-    border-radius: 5px;
-}
-
-div#searchFood input[type='search']:focus{
-    outline-color: orange;
-}
-
-.toggler{
-    position: absolute;
-    top: 30%;
-    right: 3%;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggler .bar{
-    height: 3px;
-    width: 100%;
+.hambuger span{
+    display: block;
+    height: 2px;
+    width: 20px;
     background-color: white;
-    border-radius: 10px;
+    margin-bottom: 2px;
+}
+
+.hambuger{
+    border: 1px solid lightgray;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
 }
 
 
-/* 
-responsive design */
+/* Responsive Navbar */
 
-@media(max-width: 680px){
-    .toggler{
-        display: flex;
-    }
-
-    .toggler_small_screen{
-        top: 7%;
-    }
-
-    .nav-links{
-        display: none;
-        width: 100%;
-    }
-
-    div#searchFood input[type='search']{
-        display: none;
-    }
-     
-    div#searchFood input[type='search'].active{
-        display: flex;
-    }
+@media(max-width:600px){
     .navbar{
         flex-direction: column;
         align-items: flex-start;
+        gap: 20px;
+        position: relative;
     }
 
-    .nav-links ul{
+    .navbar_links{
         flex-direction: column;
-        width: 100%;
+        gap: 20px;
+        display: none;
     }
 
-    .nav-links.active{
+    .navbar_links.active{
         display: flex;
-        animation-name: openNavbar;
-        animation-duration: 3s;
     }
-    @keyframes openNavbar {
-        from{opacity: 0}
-        to{opacity: 1}
+
+    .hambuger{
+        display: block;
+        margin-top: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
-
-/* navigation links end */

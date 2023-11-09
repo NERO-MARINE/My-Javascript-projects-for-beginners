@@ -2,38 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with JS</title>
     <link rel="stylesheet" href="style.css">
-    <title>NavBar</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav class="navbar">
-                <div class="nav-brand">Logo</div>
-                <div class="toggler">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <div class="nav-links">
-                    <ul id="menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/new-food">New Post</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div id="searchFood">
-                    <form action="/search" method="POST">
-                        <input type="search" placeholder="search....">
-                   </form>
-                </div>
-            </nav>
-        </header>
+    <div class="hero">
+        <div class="navbar container">
+            <div class="logo">
+                Logo
+            </div>
+            <ul class="navbar_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+            <div class="hambuger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-
     <script src="main.js"></script>
 </body>
 </html>
